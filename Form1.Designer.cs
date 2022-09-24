@@ -62,6 +62,7 @@
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -384,11 +385,24 @@
             this.textBox13.Size = new System.Drawing.Size(119, 23);
             this.textBox13.TabIndex = 35;
             // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Enabled = false;
+            this.checkBox4.Location = new System.Drawing.Point(337, 432);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(106, 19);
+            this.checkBox4.TabIndex = 37;
+            this.checkBox4.Text = "Leather overlay";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 484);
+            this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.textBox13);
             this.Controls.Add(this.label12);
@@ -466,5 +480,6 @@
         private TextBox textBox12;
         private Label label14;
         private TextBox textBox13;
+        private CheckBox checkBox4;
     }
 }

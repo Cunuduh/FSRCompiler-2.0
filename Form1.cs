@@ -1,4 +1,3 @@
-using System.Text.RegularExpressions;
 namespace FSRCompiler_2._0
 {
     public partial class Form1 : Form
@@ -54,16 +53,16 @@ namespace FSRCompiler_2._0
                 case (int)ItemType.ArmourModel:
                     file = string.Concat("type=armor\nitems=minecraft:", textBox1.Text,
                                          "\ntexture.", textBox9.Text, "_layer_1=", textBox8.Text,
-                                         textBox9.Text == "leather" ? string.Concat("\ntexture.", textBox9.Text, "layer_1_overlay=", textBox12.Text) : null,
+                                         textBox9.Text == "leather" ? string.Concat("\ntexture.", textBox9.Text, "_layer_1_overlay=", textBox12.Text) : null,
                                          "\ntexture.", textBox9.Text, "_layer_2=", textBox10.Text,
-                                         textBox9.Text == "leather" ? string.Concat("\ntexture.", textBox9.Text, "layer_2_overlay=", textBox11.Text) : null);
+                                         textBox9.Text == "leather" ? string.Concat("\ntexture.", textBox9.Text, "_layer_2_overlay=", textBox11.Text) : null);
                                         
-                    if (Regex.IsMatch(textBox13.Text, "[a-zA-Z]"))
+                    if (textBox13.Text.Any(p => char.IsLetterOrDigit(p)))
                     {
                         file = string.Concat(file, "\ntexture.", textBox13.Text, "_layer_1=", textBox8.Text,
-                                             textBox13.Text == "leather" ? string.Concat("\ntexture.", textBox13.Text, "layer_1_overlay=", textBox12.Text) : null,
+                                             textBox13.Text == "leather" ? string.Concat("\ntexture.", textBox13.Text, "_layer_1_overlay=", textBox12.Text) : null,
                                              "\ntexture.", textBox13.Text, "_layer_2=", textBox10.Text,
-                                             textBox13.Text == "leather" ? string.Concat("\ntexture.", textBox13.Text, "layer_2_overlay=", textBox11.Text) : null);
+                                             textBox13.Text == "leather" ? string.Concat("\ntexture.", textBox13.Text, "_layer_2_overlay=", textBox11.Text) : null);
                     }
                     break;
                 case (int)ItemType.Skull:
@@ -86,34 +85,46 @@ namespace FSRCompiler_2._0
             {
                 label9.Text = "Skull";
                 label10.Text = "Leather Overlay Icon";
-                label10.Enabled = true;
-                textBox8.Enabled = true;
-                label9.Enabled = false;
-                textBox9.Enabled = false;
-                label11.Enabled = false;
-                textBox10.Enabled = false;
-                label14.Enabled = false;
-                textBox13.Enabled = false;
+                EnableStuff();
+                label13.Enabled = false;
+                textBox12.Enabled = false;
+                label12.Enabled = false;
+                textBox11.Enabled = false;
+                checkBox4.Enabled = true;
                 return;
             }
             if (comboBox1.SelectedIndex == (int)ItemType.ArmourModel)
             {
                 label9.Text = "Armour Material";
                 label10.Text = "Armour Layer 1";
-                label9.Enabled = true;
-                textBox9.Enabled = true;
+                EnableStuff();
+                checkBox4.Enabled = true;
                 label10.Enabled = true;
                 textBox8.Enabled = true;
-                label11.Enabled = true;
-                textBox10.Enabled = true;
-                label14.Enabled = true;
-                textBox13.Enabled = true;
+                if (checkBox4.Checked)
+                { 
+                    label13.Enabled = true;
+                    textBox12.Enabled = true;
+                    label12.Enabled = true;
+                    textBox11.Enabled = true;
+                }
                 return;
             }
             label9.Text = "Skull";
             label10.Text = "Armour Layer 1";
             label10.Enabled = false;
             textBox8.Enabled = false;
+            label9.Enabled = false;
+            textBox9.Enabled = false;
+            label11.Enabled = false;
+            textBox10.Enabled = false;
+            label14.Enabled = false;
+            textBox13.Enabled = false;
+            checkBox4.Enabled = false;
+            checkBox4.Checked = false;
+        }
+        private void EnableStuff()
+        {
             label9.Enabled = false;
             textBox9.Enabled = false;
             label11.Enabled = false;
@@ -152,7 +163,31 @@ namespace FSRCompiler_2._0
             label6.Enabled = false;
             textBox5.Enabled = false;
         }
-
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked)
+            {
+                if (comboBox1.SelectedIndex == (int)ItemType.ArmourModel)
+                {
+                    label13.Enabled = true;
+                    textBox12.Enabled = true;
+                    label12.Enabled = true;
+                    textBox11.Enabled = true;
+                }
+                label10.Enabled = true;
+                textBox8.Enabled = true;
+                return;
+            }
+            if (comboBox1.SelectedIndex != (int)ItemType.ArmourModel)
+            {
+                label10.Enabled = false;
+                textBox8.Enabled = false;
+            }
+            label13.Enabled = false;
+            textBox12.Enabled = false;
+            label12.Enabled = false;
+            textBox11.Enabled = false;
+        }
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox5.Checked)
