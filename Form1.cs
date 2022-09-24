@@ -17,14 +17,14 @@ namespace FSRCompiler_2._0
         }
         private void button1_Click(object sender, EventArgs e) // Create properties file
         {
-            SaveFileDialog sfd = new SaveFileDialog()
+            SaveFileDialog sfd = new()
             {
                 InitialDirectory = Application.StartupPath + "\\Scripts\\",
                 Title = "Save CIT File",
                 CheckPathExists = true,
                 DefaultExt = "properties",
                 FileName = textBox3.Text,
-                Filter = ".properties files (*.properties)|*.properties|All files (*.*)|*.*",
+                Filter = ".PROPERTIES files (*.properties)|*.properties|All files (*.*)|*.*",
                 FilterIndex = 1,
                 RestoreDirectory = true
             };
@@ -56,7 +56,6 @@ namespace FSRCompiler_2._0
                                          textBox9.Text == "leather" ? string.Concat("\ntexture.", textBox9.Text, "_layer_1_overlay=", textBox12.Text) : null,
                                          "\ntexture.", textBox9.Text, "_layer_2=", textBox10.Text,
                                          textBox9.Text == "leather" ? string.Concat("\ntexture.", textBox9.Text, "_layer_2_overlay=", textBox11.Text) : null);
-                                        
                     if (textBox13.Text.Any(p => char.IsLetterOrDigit(p)))
                     {
                         file = string.Concat(file, "\ntexture.", textBox13.Text, "_layer_1=", textBox8.Text,
@@ -85,19 +84,24 @@ namespace FSRCompiler_2._0
             {
                 label9.Text = "Skull";
                 label10.Text = "Leather Overlay Icon";
-                EnableStuff();
+                EnableStuff(false);
                 label13.Enabled = false;
                 textBox12.Enabled = false;
                 label12.Enabled = false;
                 textBox11.Enabled = false;
                 checkBox4.Enabled = true;
+                if (!checkBox4.Checked)
+                {
+                    label10.Enabled = false;
+                    textBox8.Enabled = false;
+                }
                 return;
             }
             if (comboBox1.SelectedIndex == (int)ItemType.ArmourModel)
             {
                 label9.Text = "Armour Material";
                 label10.Text = "Armour Layer 1";
-                EnableStuff();
+                EnableStuff(true);
                 checkBox4.Enabled = true;
                 label10.Enabled = true;
                 textBox8.Enabled = true;
@@ -123,23 +127,25 @@ namespace FSRCompiler_2._0
             checkBox4.Enabled = false;
             checkBox4.Checked = false;
         }
-        private void EnableStuff()
+        private void EnableStuff(bool a)
         {
-            label9.Enabled = false;
-            textBox9.Enabled = false;
-            label11.Enabled = false;
-            textBox10.Enabled = false;
-            label14.Enabled = false;
-            textBox13.Enabled = false;
+            label9.Enabled = a;
+            textBox9.Enabled = a;
+            label11.Enabled = a;
+            textBox10.Enabled = a;
+            label14.Enabled = a;
+            textBox13.Enabled = a;
         }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
             {
                 label3.Text = "Item Name";
+                textBox2.AutoCompleteMode = AutoCompleteMode.None;
                 return;
             }
             label3.Text = "Skyblock ID";
+            textBox2.AutoCompleteMode = AutoCompleteMode.Suggest;
         }
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
@@ -211,5 +217,5 @@ namespace FSRCompiler_2._0
             label5.Enabled = false;
             textBox4.Enabled = false;
         }
-    }
+    } 
 } // if ur reading this i <3 u
