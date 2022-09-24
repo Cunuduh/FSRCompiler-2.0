@@ -67,6 +67,10 @@ namespace FSRCompiler_2._0
                 case (int)ItemType.Skull:
                     file = string.Concat("nbt.SkullOwner.Properties.textures.0.Value=", textBox9);
                     break;
+                case (int)ItemType.FishingRod:
+                    file = string.Concat("items=minecraft:fishing_rod",
+                                         "texture.fishing_rod_cast=", textBox3.Text, "_cast");
+                    break;
                 default:
                     file = string.Concat("items=minecraft:", textBox1.Text);
                     break;
@@ -217,5 +221,5 @@ namespace FSRCompiler_2._0
             label5.Enabled = false;
             textBox4.Enabled = false;
         }
-    } 
+    }
 } // if ur reading this i <3 u
