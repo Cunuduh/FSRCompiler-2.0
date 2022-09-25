@@ -65,6 +65,7 @@ namespace FSRCompiler_2._0
             this.label14 = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -111,6 +112,8 @@ namespace FSRCompiler_2._0
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Window;
+            this.label1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label1.Location = new System.Drawing.Point(5, 135);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 15);
@@ -120,6 +123,8 @@ namespace FSRCompiler_2._0
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Window;
+            this.label2.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label2.Location = new System.Drawing.Point(5, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 15);
@@ -129,6 +134,8 @@ namespace FSRCompiler_2._0
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Window;
+            this.label3.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label3.Location = new System.Drawing.Point(5, 214);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 15);
@@ -138,23 +145,27 @@ namespace FSRCompiler_2._0
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.checkBox1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.checkBox1.Location = new System.Drawing.Point(76, 382);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(105, 19);
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "Use item name";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.UseVisualStyleBackColor = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
+            this.checkBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.checkBox2.ForeColor = System.Drawing.SystemColors.WindowText;
             this.checkBox2.Location = new System.Drawing.Point(76, 407);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(68, 19);
             this.checkBox2.TabIndex = 8;
             this.checkBox2.Text = "Use lore";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.UseVisualStyleBackColor = false;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // textBox3
@@ -167,6 +178,8 @@ namespace FSRCompiler_2._0
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.Window;
+            this.label4.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label4.Location = new System.Drawing.Point(5, 97);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 15);
@@ -184,7 +197,9 @@ namespace FSRCompiler_2._0
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.Window;
             this.label5.Enabled = false;
+            this.label5.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label5.Location = new System.Drawing.Point(5, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 15);
@@ -194,18 +209,22 @@ namespace FSRCompiler_2._0
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
+            this.checkBox3.BackColor = System.Drawing.SystemColors.Window;
+            this.checkBox3.ForeColor = System.Drawing.SystemColors.WindowText;
             this.checkBox3.Location = new System.Drawing.Point(337, 382);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(112, 19);
             this.checkBox3.TabIndex = 13;
             this.checkBox3.Text = "Use custom NBT";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.UseVisualStyleBackColor = false;
             this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.Window;
             this.label6.Enabled = false;
+            this.label6.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label6.Location = new System.Drawing.Point(6, 257);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 15);
@@ -224,29 +243,35 @@ namespace FSRCompiler_2._0
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
+            this.checkBox5.BackColor = System.Drawing.SystemColors.Window;
+            this.checkBox5.ForeColor = System.Drawing.SystemColors.WindowText;
             this.checkBox5.Location = new System.Drawing.Point(75, 432);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(135, 19);
             this.checkBox5.TabIndex = 19;
             this.checkBox5.Text = "Custom texture path";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.UseVisualStyleBackColor = false;
             this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
+            this.checkBox6.BackColor = System.Drawing.SystemColors.Window;
+            this.checkBox6.ForeColor = System.Drawing.SystemColors.WindowText;
             this.checkBox6.Location = new System.Drawing.Point(337, 407);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(132, 19);
             this.checkBox6.TabIndex = 20;
             this.checkBox6.Text = "Custom model path";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.UseVisualStyleBackColor = false;
             this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.Window;
             this.label8.Enabled = false;
+            this.label8.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label8.Location = new System.Drawing.Point(5, 55);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 15);
@@ -264,7 +289,9 @@ namespace FSRCompiler_2._0
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.Window;
             this.label7.Enabled = false;
+            this.label7.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label7.Location = new System.Drawing.Point(12, 342);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(30, 15);
@@ -298,7 +325,9 @@ namespace FSRCompiler_2._0
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.Window;
             this.label9.Enabled = false;
+            this.label9.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label9.Location = new System.Drawing.Point(484, 114);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(32, 15);
@@ -308,7 +337,9 @@ namespace FSRCompiler_2._0
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.SystemColors.Window;
             this.label10.Enabled = false;
+            this.label10.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label10.Location = new System.Drawing.Point(468, 386);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(115, 15);
@@ -326,7 +357,9 @@ namespace FSRCompiler_2._0
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.Window;
             this.label11.Enabled = false;
+            this.label11.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label11.Location = new System.Drawing.Point(484, 432);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(88, 15);
@@ -336,7 +369,9 @@ namespace FSRCompiler_2._0
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.SystemColors.Window;
             this.label12.Enabled = false;
+            this.label12.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label12.Location = new System.Drawing.Point(603, 432);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(87, 15);
@@ -354,7 +389,9 @@ namespace FSRCompiler_2._0
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.SystemColors.Window;
             this.label13.Enabled = false;
+            this.label13.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label13.Location = new System.Drawing.Point(609, 386);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(87, 15);
@@ -372,7 +409,9 @@ namespace FSRCompiler_2._0
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.SystemColors.Window;
             this.label14.Enabled = false;
+            this.label14.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label14.Location = new System.Drawing.Point(603, 114);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(103, 15);
@@ -390,20 +429,34 @@ namespace FSRCompiler_2._0
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
+            this.checkBox4.BackColor = System.Drawing.SystemColors.Window;
             this.checkBox4.Enabled = false;
+            this.checkBox4.ForeColor = System.Drawing.SystemColors.WindowText;
             this.checkBox4.Location = new System.Drawing.Point(337, 432);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(106, 19);
             this.checkBox4.TabIndex = 37;
             this.checkBox4.Text = "Leather overlay";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.UseVisualStyleBackColor = false;
             this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(199, 462);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(119, 23);
+            this.button2.TabIndex = 38;
+            this.button2.Text = "Clear all";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(730, 484);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(730, 497);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.textBox13);
@@ -483,5 +536,6 @@ namespace FSRCompiler_2._0
         private Label label14;
         private TextBox textBox13;
         private CheckBox checkBox4;
+        private Button button2;
     }
 }

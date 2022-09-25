@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -74,7 +75,7 @@ namespace FSRCompiler_2._0
                     break;
                 case (int)ItemType.FishingRod:
                     file = string.Concat("items=minecraft:fishing_rod",
-                                         "texture.fishing_rod_cast=", textBox3.Text, "_cast");
+                                         "\ntexture.fishing_rod_cast=", textBox3.Text, "_cast");
                     break;
                 default:
                     file = string.Concat("items=minecraft:", textBox1.Text);
@@ -233,6 +234,21 @@ namespace FSRCompiler_2._0
             }
             label5.Enabled = false;
             textBox4.Enabled = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e) // clear all textBoxes
+        {
+            var allTextBoxes = Controls.OfType<TextBox>();
+            var allCheckBoxes = Controls.OfType<CheckBox>();
+            foreach (TextBox textBox in allTextBoxes)
+            {
+                textBox.Text = null;
+            }
+            foreach (CheckBox checkBox in allCheckBoxes)
+            {
+                checkBox.Checked = false;
+            }
+            comboBox1.Text = null;
         }
     }
 } // if ur reading this i <3 u
