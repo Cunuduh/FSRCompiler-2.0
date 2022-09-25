@@ -60,15 +60,15 @@ namespace FSRCompiler_2._0
                 case (int)ItemType.ArmourModel:
                     file = string.Concat("type=armor\nitems=minecraft:", textBox1.Text,
                                          "\ntexture.", textBox9.Text, "_layer_1=", textBox8.Text,
-                                         textBox9.Text == "leather" ? string.Concat("\ntexture.", textBox9.Text, "_layer_1_overlay=", textBox12.Text) : null,
+                                         textBox9.Text == "leather" ? string.Concat("\ntexture.", textBox9.Text, "_layer_1_overlay=", !textBox12.Text.Any(p => char.IsLetterOrDigit(p)) ? textBox8.Text : textBox12.Text) : null,
                                          "\ntexture.", textBox9.Text, "_layer_2=", textBox10.Text,
-                                         textBox9.Text == "leather" ? string.Concat("\ntexture.", textBox9.Text, "_layer_2_overlay=", textBox11.Text is null ? textBox10.Text : textBox11.Text) : null);
+                                         textBox9.Text == "leather" ? string.Concat("\ntexture.", textBox9.Text, "_layer_2_overlay=", !textBox11.Text.Any(p => char.IsLetterOrDigit(p)) ? textBox10.Text : textBox11.Text) : null);
                     if (textBox13.Text.Any(p => char.IsLetterOrDigit(p)))
                     {
                         file = string.Concat(file, "\ntexture.", textBox13.Text, "_layer_1=", textBox8.Text,
-                                             textBox13.Text == "leather" ? string.Concat("\ntexture.", textBox13.Text, "_layer_1_overlay=", textBox12.Text is null ? textBox8.Text : textBox12.Text) : null,
+                                             textBox13.Text == "leather" ? string.Concat("\ntexture.", textBox13.Text, "_layer_1_overlay=",!textBox12.Text.Any(p => char.IsLetterOrDigit(p)) ? textBox8.Text : textBox12.Text) : null,
                                              "\ntexture.", textBox13.Text, "_layer_2=", textBox10.Text,
-                                             textBox13.Text == "leather" ? string.Concat("\ntexture.", textBox13.Text, "_layer_2_overlay=", textBox11.Text is null ? textBox10.Text : textBox11.Text) : null);
+                                             textBox13.Text == "leather" ? string.Concat("\ntexture.", textBox13.Text, "_layer_2_overlay=", !textBox11.Text.Any(p => char.IsLetterOrDigit(p)) ? textBox10.Text : textBox11.Text) : null);
                     }
                     break;
                 case (int)ItemType.Skull:
