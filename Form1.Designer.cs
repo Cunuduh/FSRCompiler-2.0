@@ -102,7 +102,8 @@ namespace FSRCompiler_2._0
             "Armour Icon",
             "Bow",
             "Skull",
-            "Fishing Rod"});
+            "Fishing Rod",
+            "Block"});
             this.comboBox1.Location = new System.Drawing.Point(79, 132);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(378, 23);

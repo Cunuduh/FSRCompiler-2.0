@@ -15,7 +15,8 @@ namespace FSRCompiler_2._0
             ArmourIcon,
             Bow,
             Skull,
-            FishingRod
+            FishingRod,
+            Block
         }
         public Form1()
         {
@@ -77,6 +78,12 @@ namespace FSRCompiler_2._0
                     file = string.Concat("items=minecraft:fishing_rod",
                                          "\ntexture.fishing_rod_cast=", textBox3.Text, "_cast");
                     break;
+                case (int)ItemType.Block:
+                    file = string.Concat("matchBlocks=minecraft:", textBox1.Text,
+                                         "\ntiles=", textBox3.Text,
+                                         "\nmethod=", textBox13.Text,
+                                         "\nbiome=", textBox9.Text);
+                    return file;
                 default:
                     file = string.Concat("items=minecraft:", textBox1.Text);
                     break;
@@ -124,24 +131,34 @@ namespace FSRCompiler_2._0
                 }
                 return;
             }
-            if (comboBox1.SelectedIndex == (int)ItemType.Skull)
+            if (comboBox1.SelectedIndex == (int)ItemType.Skull || comboBox1.SelectedIndex == (int)ItemType.Block)
             {
+                label9.Text = "Skull";
                 label9.Enabled = true;
                 textBox9.Enabled = true;
+                if (comboBox1.SelectedIndex == (int)ItemType.Block)
+                {
+                    label14.Enabled = true;
+                    textBox13.Enabled = true;
+                    label9.Text = "Biome";
+                    label14.Text = "Method";
+                }
+                else
+                {
+                    label14.Enabled = false;
+                    textBox13.Enabled = false;
+                }
             }
             else
             {
                 label9.Enabled = false;
                 textBox9.Enabled = false;
             }
-            label9.Text = "Skull";
             label10.Text = "Armour Layer 1";
             label10.Enabled = false;
             textBox8.Enabled = false;
             label11.Enabled = false;
             textBox10.Enabled = false;
-            label14.Enabled = false;
-            textBox13.Enabled = false;
             checkBox4.Enabled = false;
             checkBox4.Checked = false;
         }
