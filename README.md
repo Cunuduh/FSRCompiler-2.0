@@ -1,6 +1,6 @@
 # FSR Compiler 2.0
 
-Optifine CIT File Creator for Hypixel Skyblock by Cunuduh (invalid-user#7279 on Discord)
+Optifine CIT File Creator for Hypixel Skyblock by Cunuduh (ping invalid-user#7279 on Discord if there are bugs)
 
 ## .exe file?
 
