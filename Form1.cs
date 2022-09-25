@@ -1,3 +1,8 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Windows.Forms;
+
 namespace FSRCompiler_2._0
 {
     public partial class Form1 : Form
@@ -118,12 +123,20 @@ namespace FSRCompiler_2._0
                 }
                 return;
             }
+            if (comboBox1.SelectedIndex == (int)ItemType.Skull)
+            {
+                label9.Enabled = true;
+                textBox9.Enabled = true;
+            }
+            else
+            {
+                label9.Enabled = false;
+                textBox9.Enabled = false;
+            }
             label9.Text = "Skull";
             label10.Text = "Armour Layer 1";
             label10.Enabled = false;
             textBox8.Enabled = false;
-            label9.Enabled = false;
-            textBox9.Enabled = false;
             label11.Enabled = false;
             textBox10.Enabled = false;
             label14.Enabled = false;

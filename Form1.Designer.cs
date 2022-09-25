@@ -1,4 +1,6 @@
-﻿namespace FSRCompiler_2._0
+﻿using System.Windows.Forms;
+
+namespace FSRCompiler_2._0
 {
     partial class Form1
     {

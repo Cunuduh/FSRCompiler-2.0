@@ -1,3 +1,5 @@
+using System;
+using System.Windows.Forms;
 namespace FSRCompiler_2._0
 {
     internal static class Program
