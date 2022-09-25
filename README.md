@@ -16,7 +16,7 @@ Vanilla Item is the Minecraft item/block being textured. Multiple items can be e
 
 The Skyblock ID is the ID of the item being textured. Enabling 'Use item name' check box will make it use the item's name instead.
 
-Custom NBT is enabled with the 'Use custom NBT' check box. You can enter the weight of the item texture, or use any extra NBT attributes of the item itself. Press enter to create a new line.
+Custom NBT is enabled with the 'Use custom NBT' check box. You can enter the weight of the item texture, texture based on stackSize (for UI) or use any extra NBT attributes of the item itself. Press enter to create a new line.
 
 Lore is enabled with the 'Use lore' check box. Use this if you want the item to be textured based on its lore (the description of the item in-game).
 
